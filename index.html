@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tastatur {
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+
+        }
+
+        .tastatur>div {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            border: solid black;
+            margin: 2px;
+            cursor: pointer;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Tastaturtest
+
+    </h1>
+    <div>Ditt telefonnummer:</div>
+    <div id="textFelt"></div>
+    <br><br>
+    <div class="tastatur">
+        <div onclick="nummerKnapp.call(this)">1</div>
+        <div onclick="nummerKnapp.call(this)">2</div>
+        <div onclick="nummerKnapp.call(this)">3</div>
+        <div onclick="nummerKnapp.call(this)">4</div>
+        <div onclick="nummerKnapp.call(this)">5</div>
+        <div onclick="nummerKnapp.call(this)">6</div>
+        <div onclick="nummerKnapp.call(this)">7</div>
+        <div onclick="nummerKnapp.call(this)">8</div>
+        <div onclick="nummerKnapp.call(this)">9</div>
+        <div onclick="nummerKnapp.call(this)">0</div>
+        <div onclick="nummerKnapp.call(this)">#</div>
+        
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script>
+
+        let textfeltDiv = document.getElementById('textFelt');
+        let tlfNummer = '';
+               
+
+        function nummerKnapp() {
+            tlfNummer += this.textContent;
+            textfeltDiv.textContent = tlfNummer;
+        }
+        function reset(){
+            tlfNummer = '';
+            textfeltDiv.innerHTML = tlfNummer;
+        }
+
+
+    </script>
+    <!-- <h1>Tastaturtest
+
+    </h1>
+    <div>Ditt telefonnummer:</div>
+    <div id="textFelt"></div>
+    <br><br>
+    <div class="tastatur">
+        <div onclick="nummerKnapp(1)">1</div>
+        <div onclick="nummerKnapp(2)">2</div>
+        <div onclick="nummerKnapp(3)">3</div>
+        <div onclick="nummerKnapp(4)">4</div>
+        <div onclick="nummerKnapp(5)">5</div>
+        <div onclick="nummerKnapp(6)">6</div>
+        <div onclick="nummerKnapp(7)">7</div>
+        <div onclick="nummerKnapp(8)">8</div>
+        <div onclick="nummerKnapp(9)">9</div>
+        <div onclick="nummerKnapp(0)">0</div>
+        <br>
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script>
+
+        let textfeltDiv = document.getElementById('textFelt');
+        let tlfNummer = '';
+
+        function nummerKnapp(nummer) {
+            tlfNummer += nummer;
+            textfeltDiv.textContent = tlfNummer;
+        }
+        function reset(){
+            textfeltDiv.innerHTML = '';
+        }
+
+
+    </script> -->
+
+</body>
+
+</html>
